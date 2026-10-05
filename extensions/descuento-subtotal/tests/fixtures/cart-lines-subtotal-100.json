@@ -1,7 +1,6 @@
 {
     "payload":  {
                     "export":  "cart-lines-discounts-generate-run",
-                    "target":  "cart.lines.discounts.generate.run",
                     "input":  {
                                   "cart":  {
                                                "lines":  [
@@ -21,6 +20,7 @@
                                                                        ]
                                                }
                               },
+                    "target":  "cart.lines.discounts.generate.run",
                     "output":  {
                                    "operations":  [
                                                       {

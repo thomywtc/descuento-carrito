@@ -1,7 +1,6 @@
 {
     "payload":  {
                     "export":  "cart-lines-discounts-generate-run",
-                    "target":  "cart.lines.discounts.generate.run",
                     "input":  {
                                   "cart":  {
                                                "lines":  [
@@ -9,7 +8,7 @@
                                                                  "id":  "gid://shopify/CartLine/0",
                                                                  "cost":  {
                                                                               "subtotalAmount":  {
-                                                                                                     "amount":  "6.0"
+                                                                                                     "amount":  "99.0"
                                                                                                  }
                                                                           }
                                                              }
@@ -17,13 +16,11 @@
                                            },
                                   "discount":  {
                                                    "discountClasses":  [
-                                                                           "PRODUCT",
-                                                                           "ORDER",
-                                                                           "SHIPPING"
+                                                                           "ORDER"
                                                                        ]
                                                }
                               },
-                    "inputBytes":  126,
+                    "target":  "cart.lines.discounts.generate.run",
                     "output":  {
                                    "operations":  [
 
