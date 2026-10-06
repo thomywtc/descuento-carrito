@@ -33,6 +33,18 @@ importers:
         specifier: ~2025.10.12
         version: 2025.10.16(@preact/signals@2.11.3(preact@10.29.8))(preact@10.29.8)
 
+  extensions/descuento-settings:
+    dependencies:
+      '@preact/signals':
+        specifier: ^2.3.x
+        version: 2.11.3(preact@10.29.8)
+      '@shopify/ui-extensions':
+        specifier: ~2026.01.0
+        version: 2026.1.5(@preact/signals@2.11.3(preact@10.29.8))(preact@10.29.8)
+      preact:
+        specifier: ^10.10.x
+        version: 10.29.8(preact-render-to-string@6.8.0)
+
   extensions/descuento-subtotal:
     dependencies:
       '@shopify/shopify_function':
@@ -1029,6 +1041,17 @@ packages:
 
   '@shopify/ui-extensions@2025.10.16':
     resolution: {integrity: sha512-w8Lr8NbAILhtqWmeKH/9osFWBsB+G0ksWho/V3cruhK/t0GcdQA6GANKokFPTsmD9sszqlrrO+URbs5I/vHxiQ==}
+    peerDependencies:
+      '@preact/signals': '*'
+      preact: '*'
+    peerDependenciesMeta:
+      '@preact/signals':
+        optional: true
+      preact:
+        optional: true
+
+  '@shopify/ui-extensions@2026.1.5':
+    resolution: {integrity: sha512-vDWYOtEcMT/Jm4s8Fe8iZVoRiLNwG5DbC0kqfrFRTcPD2D6mvkL+e3MYc4LfrTV4dPCCqBjSvfMpa8fK33fDFA==}
     peerDependencies:
       '@preact/signals': '*'
       preact: '*'
@@ -3678,6 +3701,13 @@ snapshots:
       - utf-8-validate
 
   '@shopify/ui-extensions@2025.10.16(@preact/signals@2.11.3(preact@10.29.8))(preact@10.29.8)':
+    dependencies:
+      ts-morph: 25.0.1
+    optionalDependencies:
+      '@preact/signals': 2.11.3(preact@10.29.8)
+      preact: 10.29.8(preact-render-to-string@6.8.0)
+
+  '@shopify/ui-extensions@2026.1.5(@preact/signals@2.11.3(preact@10.29.8))(preact@10.29.8)':
     dependencies:
       ts-morph: 25.0.1
     optionalDependencies:

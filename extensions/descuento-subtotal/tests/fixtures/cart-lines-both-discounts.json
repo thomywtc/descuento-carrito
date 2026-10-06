@@ -11,7 +11,13 @@
                                                                               "subtotalAmount":  {
                                                                                                      "amount":  "6.0"
                                                                                                  }
-                                                                          }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 }
                                                              }
                                                          ]
                                            },
@@ -23,7 +29,6 @@
                                                                        ]
                                                }
                               },
-                    "inputBytes":  126,
                     "output":  {
                                    "operations":  [
 

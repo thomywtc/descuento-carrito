@@ -1,0 +1,87 @@
+{
+    "payload":  {
+                    "export":  "cart-lines-discounts-generate-run",
+                    "input":  {
+                                  "cart":  {
+                                               "lines":  [
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "30.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/0"
+                                                             },
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "30.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/2"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/1"
+                                                             },
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "40.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/3"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/2"
+                                                             }
+                                                         ]
+                                           },
+                                  "discount":  {
+                                                   "discountClasses":  [
+                                                                           "ORDER"
+                                                                       ]
+                                               }
+                              },
+                    "target":  "cart.lines.discounts.generate.run",
+                    "output":  {
+                                   "operations":  [
+                                                      {
+                                                          "orderDiscountsAdd":  {
+                                                                                    "candidates":  [
+                                                                                                       {
+                                                                                                           "message":  "10% desde 100 con 3 productos distintos",
+                                                                                                           "value":  {
+                                                                                                                         "percentage":  {
+                                                                                                                                            "value":  10
+                                                                                                                                        }
+                                                                                                                     },
+                                                                                                           "targets":  [
+                                                                                                                           {
+                                                                                                                               "orderSubtotal":  {
+                                                                                                                                                     "excludedCartLineIds":  [
+
+                                                                                                                                                                             ]
+                                                                                                                                                 }
+                                                                                                                           }
+                                                                                                                       ]
+                                                                                                       }
+                                                                                                   ],
+                                                                                    "selectionStrategy":  "FIRST"
+                                                                                }
+                                                      }
+                                                  ]
+                               }
+                }
+}

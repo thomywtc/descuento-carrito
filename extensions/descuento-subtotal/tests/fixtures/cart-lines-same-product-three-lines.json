@@ -1,0 +1,64 @@
+{
+    "payload":  {
+                    "export":  "cart-lines-discounts-generate-run",
+                    "input":  {
+                                  "cart":  {
+                                               "lines":  [
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "50.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/0"
+                                                             },
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "50.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/1"
+                                                             },
+                                                             {
+                                                                 "cost":  {
+                                                                              "subtotalAmount":  {
+                                                                                                     "amount":  "50.00"
+                                                                                                 }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 },
+                                                                 "id":  "gid://shopify/CartLine/2"
+                                                             }
+                                                         ]
+                                           },
+                                  "discount":  {
+                                                   "discountClasses":  [
+                                                                           "ORDER"
+                                                                       ]
+                                               }
+                              },
+                    "target":  "cart.lines.discounts.generate.run",
+                    "output":  {
+                                   "operations":  [
+
+                                                  ]
+                               }
+                }
+}

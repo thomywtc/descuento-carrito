@@ -30,18 +30,10 @@ function App() {
         {error ? <s-banner tone="critical">{error}</s-banner> : null}
 
         <s-paragraph>
-          Aplica un 10% de descuento al pedido cuando la suma de
-          los subtotales de sus líneas alcanza 100.
-        </s-paragraph>
-
-        <s-paragraph>
-          El mínimo se interpreta en la moneda del carrito.
-          No aplica descuentos de producto ni de envío.
-        </s-paragraph>
-
-        <s-paragraph>
-          Esta regla está definida en el código de la Function.
-          No tiene parámetros editables en esta pantalla.
+          Aplica un 10% de descuento al pedido cuando el subtotal
+          alcanza 100 y el carrito contiene al menos 3 productos
+          distintos. Variantes o unidades del mismo producto
+          cuentan como un solo producto.
         </s-paragraph>
       </s-section>
     </s-function-settings>

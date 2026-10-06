@@ -11,7 +11,13 @@
                                                                               "subtotalAmount":  {
                                                                                                      "amount":  "100.0"
                                                                                                  }
-                                                                          }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 }
                                                              }
                                                          ]
                                            },

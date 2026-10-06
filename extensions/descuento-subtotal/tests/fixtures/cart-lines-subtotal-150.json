@@ -10,7 +10,13 @@
                                                                               "subtotalAmount":  {
                                                                                                      "amount":  "150.0"
                                                                                                  }
-                                                                          }
+                                                                          },
+                                                                 "merchandise":  {
+                                                                                     "__typename":  "ProductVariant",
+                                                                                     "product":  {
+                                                                                                     "id":  "gid://shopify/Product/1"
+                                                                                                 }
+                                                                                 }
                                                              }
                                                          ]
                                            },
@@ -23,30 +29,7 @@
                     "target":  "cart.lines.discounts.generate.run",
                     "output":  {
                                    "operations":  [
-                                                      {
-                                                          "orderDiscountsAdd":  {
-                                                                                    "candidates":  [
-                                                                                                       {
-                                                                                                           "message":  "10% de descuento desde 100",
-                                                                                                           "value":  {
-                                                                                                                         "percentage":  {
-                                                                                                                                            "value":  10
-                                                                                                                                        }
-                                                                                                                     },
-                                                                                                           "targets":  [
-                                                                                                                           {
-                                                                                                                               "orderSubtotal":  {
-                                                                                                                                                     "excludedCartLineIds":  [
 
-                                                                                                                                                                             ]
-                                                                                                                                                 }
-                                                                                                                           }
-                                                                                                                       ]
-                                                                                                       }
-                                                                                                   ],
-                                                                                    "selectionStrategy":  "FIRST"
-                                                                                }
-                                                      }
                                                   ]
                                }
                 }

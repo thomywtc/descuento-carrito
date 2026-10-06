@@ -7,6 +7,14 @@ query CartInput {
           amount
         }
       }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            id
+          }
+        }
+      }
     }
   }
   discount {

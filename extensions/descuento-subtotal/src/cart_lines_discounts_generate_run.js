@@ -5,12 +5,12 @@ import {
 
 /**
  * @typedef {import("../generated/api").CartInput} RunInput
- * @typedef {import("../generated/api").CartLinesDiscountsGenerateRunResult} CartLinesDiscountsGenerateRunResult
+ * @typedef {import("../generated/api").CartLinesDiscountsGenerateRunResult} RunResult
  */
 
 /**
  * @param {RunInput} input
- * @returns {CartLinesDiscountsGenerateRunResult}
+ * @returns {RunResult}
  */
 export function cartLinesDiscountsGenerateRun(input) {
   const noDiscount = { operations: [] };
@@ -23,12 +23,18 @@ export function cartLinesDiscountsGenerateRun(input) {
     return noDiscount;
   }
 
-  const subtotal = input.cart.lines.reduce(
-    (total, line) => total + Number(line.cost.subtotalAmount.amount),
-    0,
-  );
+  const productIds = new Set();
+  let subtotal = 0;
 
-  if (subtotal < 100) {
+  for (const line of input.cart.lines) {
+    subtotal += Number(line.cost.subtotalAmount.amount);
+
+    if (line.merchandise.__typename === 'ProductVariant') {
+      productIds.add(line.merchandise.product.id);
+    }
+  }
+
+  if (subtotal < 100 || productIds.size < 3) {
     return noDiscount;
   }
 
@@ -38,7 +44,7 @@ export function cartLinesDiscountsGenerateRun(input) {
         orderDiscountsAdd: {
           candidates: [
             {
-              message: '10% de descuento desde 100',
+              message: '10% desde 100 con 3 productos distintos',
               targets: [
                 {
                   orderSubtotal: {
